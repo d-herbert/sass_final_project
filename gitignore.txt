@@ -1,0 +1,6 @@
+node_modules
+.vscode
+dist/css/og_styles.css
+*.json
+gulpfile.js
+*.ini

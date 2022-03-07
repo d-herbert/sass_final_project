@@ -1,0 +1,18 @@
+body {
+    background: url('../../images/bg.gif') repeat-x;
+    font-family: $font-family;
+    margin: 50;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+main {
+    width: $width;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    width: inherit;
+
+}
