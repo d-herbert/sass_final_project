@@ -10,6 +10,15 @@ main {
     width: $width;
     margin: 0 auto;
     padding: 0 10px;
+    @include break(767px, 959px) {
+        width: 768px;
+    }
+    @include break(459px, 767px) {
+        width: 640px;
+    }
+    @include break(0px, 459px) {
+        width: 300px;
+    }
 }
 
 header {

@@ -5,6 +5,16 @@ figure {
     float: $float;
     display: block;
     margin: 0;
+    @include break(459px, 959px) {
+        width:inherit;
+        height:140px;
+        float:none;
+        background-position:center;
+    }
+    @include break(0px, 459px) {
+        background-size:contain;
+        height:100px;
+    }
 }
 
 nav {
