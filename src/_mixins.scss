@@ -1,14 +1,23 @@
-@mixin backImage($image, $height: 100vh) {
-    background: url($image);
-    background-repeat: no-repeat;
-    background-size: cover;
+// Create at least 3 Sass mixins for all the generic boxes including logo, navigation menu, header, content areas, and footer. Your mixins should also contain default parameters for the properties that you are setting within the mixin.
+
+//  mixin #1 for size of logo, nav menu, header, content, and footer
+@mixin sectionSize($width: 100%, $height: 100%) {
+    width: $width;
     height: $height;
 }
 
-// logo, navigation menu, header, content areas, and footer
+// mixin #2 for float/display of logo, nav menu, header, content, and footer
+@mixin floatDisplay($float: $float, $display: block) {
+    float: $float;
+    display: $display;
+}
 
-
-
+// mixin #3 for image properties of logo, nav menu, header, content, and footer
+@mixin imageFormat($image: $logo-img, $repeat: no-repeat, $pos: 0px) {
+    background: $image;
+    background-repeat: $repeat;
+    background-position: $pos;
+}
 
 //  media query mixin
 @mixin break($args...) {

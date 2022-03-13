@@ -1,5 +1,5 @@
 body {
-    background: url('../../images/bg.gif') repeat-x;
+    @include imageFormat($image: $bg, $repeat: repeat-x, $pos: none);
     font-family: $font-family;
     margin: 50;
     font-size: $font-size;
@@ -22,7 +22,7 @@ main {
 }
 
 header {
-    width:inherit;
+    @include sectionSize(inherit);
     clear:both;
     text-align:center;
     padding-top:40px;
@@ -39,17 +39,17 @@ header {
     h1 {
         color: $nav-color;
         font-weight: 100;
-        font-size: 4em;
+        font-size: $font-size * 4;
         line-height: $header-line-height;
         @include break(767, 959px) {
-            font-size:3em;
+            font-size: $font-size * 3;
         }
         @include break(459, 767px) {
-            font-size:2em;
+            font-size: $font-size * 2;
         }
         :first-child {
             @include break(0, 459px) {
-                font-size:1.4em;
+                font-size:$font-size * 1.4;
                 margin-bottom:20px;
             }
         }
@@ -58,31 +58,31 @@ header {
     h2 {
         color: $nav-hover;
         font-weight: 900;
-        font-size:2.5em;
+        font-size: $font-size * 2.5;
         line-height:$header-line-height;
         margin-bottom:70px;
         @include break(767, 959px) {
-            font-size:1.5em;
+            font-size:$font-size * 1.5;
         }
         @include break(459, 767px) {
-            font-size:1em;
+            font-size: $font-size;
         }
         @include break(0, 459px) {
-            font-size:1.4em;
+            font-size: $font-size * 1.4;
         }
     }
     h3 {
         color: $gray;
         font-weight:400;
-        font-size:2em;
+        font-size: $font-size * 2;
         line-height:$header-line-height;
         margin-bottom:50px;
         @include break(459, 767px) {
-            font-size:1.5em;
+            font-size: $font-size * 1.5;
         }
         @include break(0, 459px) {
             color:#FFF;
-            font-size:1em;
+            font-size: $font-size;
         }
     }
 }
