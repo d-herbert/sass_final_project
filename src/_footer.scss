@@ -4,6 +4,9 @@
     background:$greybar-color;
     clear:both;
     padding-top:30px;
+    @include break(0, 459px) {
+        display:none;
+    }
 }
 footer {
     width:100%;
@@ -12,6 +15,13 @@ footer {
     text-align:center;
     color: $nav-hover;
     padding-top:50px;
+    @include break(0, 459px) {
+        text-align:center;
+    }
+    p, img {
+        float:none;
+        margin:0; 
+    }
 }
 
 .social-media {

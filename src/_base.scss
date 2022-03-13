@@ -22,6 +22,73 @@ main {
 }
 
 header {
-    width: inherit;
+    width:inherit;
+    clear:both;
+    text-align:center;
+    padding-top:40px;
+    img {
+        max-width:100%;
+        height:auto;
+        @include break(459, 767px) {
+            margin-bottom:100px;
+        }
+        @include break(0, 459px) {
+            margin-bottom:80px;
+        }
+    }
+    h1 {
+        color: $nav-color;
+        font-weight: 100;
+        font-size: 4em;
+        line-height: $header-line-height;
+        @include break(767, 959px) {
+            font-size:3em;
+        }
+        @include break(459, 767px) {
+            font-size:2em;
+        }
+        :first-child {
+            @include break(0, 459px) {
+                font-size:1.4em;
+                margin-bottom:20px;
+            }
+        }
+    }
+    
+    h2 {
+        color: $nav-hover;
+        font-weight: 900;
+        font-size:2.5em;
+        line-height:$header-line-height;
+        margin-bottom:70px;
+        @include break(767, 959px) {
+            font-size:1.5em;
+        }
+        @include break(459, 767px) {
+            font-size:1em;
+        }
+        @include break(0, 459px) {
+            font-size:1.4em;
+        }
+    }
+    h3 {
+        color: $gray;
+        font-weight:400;
+        font-size:2em;
+        line-height:$header-line-height;
+        margin-bottom:50px;
+        @include break(459, 767px) {
+            font-size:1.5em;
+        }
+        @include break(0, 459px) {
+            color:#FFF;
+            font-size:1em;
+        }
+    }
+}
 
+select {
+    @include break(0, 459px) {
+        width:95%;
+    }
 }

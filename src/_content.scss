@@ -9,16 +9,30 @@
         font-size:2.5em;
         font-weight:100;
         padding-top:50px;
+        @include break(459px, 767px) {
+            font-size:2em;
+            padding-top:50px;
+        }
+        @include break(0px, 459px) {
+            font-size:1.5em;
+            padding-top:30px;
+        }
     }
 }
 
 #content {
     width: $width;
     margin: 20px auto;
+    @include break(767px, 959px) {
+        width:inherit;
+    }
     h3 {
         color: $gray;
         font-size: 2em;
         font-weight: 400;
+        @include break(0, 459px) {
+            font-size:1.6em;
+        }
     }
     #products {
         width: $content-width;
@@ -27,15 +41,47 @@
             float: $float;
             margin-right: 20px;
         }
+        @include break(767px, 959px) {
+            width:46%;
+            margin:0 2%;
+        }
+        @include break(459px, 767px) {
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
         article {
             margin-bottom: 40px;
+            img {
+                @include break(0, 459px) {
+                    display:none;
+                }
+            }
         }
         h4 {
             line-height: 1em;
         }
+        @include break(767px, 959px) {
+            width:46%;
+            margin:0 2%;
+        }
+        @include break(459px, 767px) {
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
         #testimonials {
             width: $content-width;
             float: right;
+            @include break(767px, 959px) {
+                width:46%;
+                margin:0 2%;
+            }
+            @include break(459px, 767px) {
+                width:96%;
+                margin:0 2%;
+                float:none;
+            }
         }
     }
 }

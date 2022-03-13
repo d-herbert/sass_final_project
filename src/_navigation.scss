@@ -22,13 +22,33 @@ nav {
     width: 540px;
     height: $nav-height;
     text-align: right;
+    @include break(459px, 959px) {
+        width:inherit;
+        height:50px;
+        float:none;
+        text-align:center;
+    }
+    @include break(0, 459px) {
+		margin-bottom:40px !important;
+    }
     ul {
         list-style-type: none;
         margin-top: 95px;
+        @include break(0, 959px) {
+            margin-top: 0;
+        }
         li {
             display: inline;
             font-size: 0.8em;
             margin-right: 10px;
+            @include break(0, 767px) {
+                font-size:0.8em;
+                margin:0 5px;
+            }
+            @include break(767, 959px) {
+                font-size:1em;
+                margin:0 10px;
+            }
             a {
                 color: $nav-color;
                 text-decoration: none;
@@ -41,33 +61,3 @@ nav {
     }
 }
 
-header {
-    width:inherit;
-    clear:both;
-    text-align:center;
-    padding-top:40px;
-    img {
-        max-width:100%;
-        height:auto;
-    }
-    h1 {
-        color: $nav-color;
-        font-weight: 100;
-        font-size: 4em;
-        line-height: $header-line-height;
-    }
-    h2 {
-        color: $nav-hover;
-        font-weight: 900;
-        font-size:2.5em;
-        line-height:$header-line-height;
-        margin-bottom:70px;
-    }
-    h3 {
-        color: $gray;
-        font-weight:400;
-        font-size:2em;
-        line-height:$header-line-height;
-        margin-bottom:50px;
-    }
-}
